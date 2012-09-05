@@ -46,12 +46,12 @@
                     
                         <h1>Save the Date</h1>
                         <h2>February 22nd-23rd 2013</h2>
-						<p>PHP London are pleased to announce their 8th annual UK PHP conference, for the second time over two days with four great tracks.</p>
-                        <p>This year we are we will be at The Brewery right in the center of the City of London.</p>
+						<p>PHP London are pleased to announce their 8th annual UK PHP conference! For the second time over two days with four great tracks.</p>
+                        <p>In 2013 we will be at The Brewery right in the center of the City of London.</p>
 						<p><a href="http://www.thebrewery.co.uk/" target="_blank"><img src="http://www.thebrewery.co.uk/1365C6FD-BEED-481F-BDF5-1E7F149E3E99.CIMG" /></a></p>
-						<p><iframe width="580" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?ie=UTF8&amp;q=the+Brewery+Chiswell+Street+London+EC1Y+4SD&amp;fb=1&amp;hq=the+Brewery+Chiswell+Street+London+EC1Y+4SD&amp;hnear=the+Brewery+Chiswell+Street+London+EC1Y+4SD&amp;cid=0,0,10506951312759484658&amp;t=m&amp;ll=51.535552,-0.071583&amp;spn=0.037372,0.099564&amp;z=13&amp;iwloc=A&amp;output=embed"></iframe></p>
+						<p><iframe width="580" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?ie=UTF8&amp;q=the+Brewery+Chiswell+Street+London+EC1Y+4SD&amp;fb=1&amp;hq=the+Brewery+Chiswell+Street+London+EC1Y+4SD&amp;hnear=the+Brewery+Chiswell+Street+London+EC1Y+4SD&amp;cid=0,0,10506951312759484658&amp;t=m&amp;ll=51.535552,-0.071583&amp;spn=0.037372,0.099564&amp;z=13&amp;iwloc=A&amp;output=embed"></iframe></p>
 						<strong>Call for Papers</strong>
-                        <p>The call for paper will be opening on the 4th of October, along with full information for the conference.</p>
+                        <p>The call for papers will be opening on the 4th of October, along with full information for the conference.</p>
                     
                   
                 </article>
