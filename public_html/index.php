@@ -58,7 +58,7 @@
 
                 <aside>
                     <h3>Sign up for more Information</h3>
-                    <p>Lorem ipsum dolor sit amet, </p>
+                    
 					<!-- Begin MailChimp Signup Form -->
 
 					<div id="mc_embed_signup">
