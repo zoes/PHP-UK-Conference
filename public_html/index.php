@@ -31,7 +31,7 @@
 
        <div class="header-container">
             <header class="wrapper clearfix">
-                <h1 class="title">PHP UK Conference 2012</h1>
+                <h1 class="title">PHP UK Conference 2013</h1>
                  <nav>
                     <ul>
                     </ul>
@@ -92,7 +92,7 @@
 
         <div class="footer-container">
             <footer class="wrapper">
-                <h3>&copy; 2012 PHP London Limited</h3>
+                <h3>&copy; 2012 PHP London Limited | <a href="http://2012.phpconference.co.uk/" target="_blank">Vist the 2012 Conference Site</a></h3>
             </footer>
         </div>
 
