@@ -19,7 +19,7 @@
 			#mc_embed_signup .button:hover {background:#333;}
 			#mc_embed_signup .mc-field-group .asterisk { top: 33px; right: 3px;  }
 			footer a { color:#fff; text-decoration: none;}
-			footer a { color:#aaa; text-decoration: underline;}
+			footer a { color:#333; text-decoration: underline;}
 			/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
 			   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 		</style>
