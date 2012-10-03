@@ -1,0 +1,718 @@
+/*
+ * Lash up for temporary site
+ */ 
+/* =CSS Resets
+-------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+ 
+
+/* =Structure
+-------------------------------------------------------------- */
+
+html, body {
+    height: 100%
+    
+}
+body {
+    font-family: "CabinRegular", "Arial", sans-serif;
+    font-size: 14px; /*All other font sizes derived at percentages */
+    line-height: 140%;
+    background-color: #fff;
+    color: #303030;
+}
+a:link {
+	color: #35bacd;  
+    text-decoration: none;
+}
+a:visited {
+   color: #5fc0ce;
+}
+a:hover {
+    color: #01708a; 
+}
+h1 {
+	font-family: 'Helvetica';
+	font-size: 200%;
+	padding-top:40px;
+	padding-bottom:20px;
+	text-shadow: 1px 1px 1px #aaa;
+	padding-left: 10px;
+	}
+h2 {
+	font-family: 'Helvetica';
+	font-size: 150%;
+	padding-top:40px;
+	padding-bottom:20px;
+	}
+h3 {
+	font-family: 'Helvetica';
+	font-size: 120%;
+	padding-top:40px;
+	padding-bottom:20px;
+	}
+ul {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 10%;
+}
+ol {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 10%;
+	list-style:decimal;
+}
+	
+.image-border {
+	background-color: #fff;
+	border:1px solid #ccc;
+	border-radius: 5px;
+}
+	
+#page {
+ 	display: block;
+	max-width: 1140px;
+	margin: auto;	 
+	background: #efefef url(images/fallback-gradient.png);
+	background-image: -webkit-gradient(radial, 50% 35%, 0, 50% 80%, 100 from(#fff), to(#efefef));
+	background-image: -webkit-radial-gradient(50% 35%, closest-corner, #fff, #efefef); 
+	background-image: -moz-radial-gradient(50% 35%, closest-corner, #fff, #efefef);
+	background-image: -ms-radial-gradient(50% 35%, closest-corner, #fff, #efefef);
+	background-image: -o-radial-gradient(50% 35%, closest-corner, #fff, #efefef);
+	/*margin-bottom: -101px;*/
+	min-height: 100%;
+}
+#primary {
+}
+
+#secondary{
+	padding-top: 30px;
+}
+#main-wrapper {
+	padding-top: 90px;
+	padding-left:5%;
+	padding-right: 5%;
+	padding-bottom:70px;
+	}
+
+#colophon {
+	clear: both;
+	display: block;
+	width: 100%;
+}
+
+/* Increase the size of the content area for templates without sidebars */
+.full-width #content,
+.image-attachment #content,
+.error404 #content {
+	margin: 0;
+}
+
+/* Text meant only for screen readers */
+.screen-reader-text,
+.assistive-text {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: #fff;
+	margin-top:20px;
+	margin-bottom: 20px;
+}
+.alignright {
+	display: inline;
+	float: right;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: #fff;
+	margin-top:20px;
+	margin-bottom: 20px;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: #fff;
+	margin-top:20px;
+	margin-bottom: 20px;
+}
+
+#button-container {
+	width: 60%;
+	margin: auto;
+}
+
+.home-button {
+	width: 200px;
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font-size: 400%;
+	padding: .5em 1em .55em;
+	text-shadow: 0 1px 1px #7d4f16;
+	-webkit-border-radius: .5em; 
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+.home-button:hover {
+	text-decoration: none;
+}
+.home-button:active {
+	position: relative;
+	top: 1px;
+}
+.home-button-text {
+	margin-top: 2%;
+	line-height: 120%;
+	font-size: 200%;
+	text-align: center;
+}
+.yellow-button {
+	color: #fffcb8;
+	border: solid 1px #fffcb8;
+	background: #fffcb8;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fffcb8), to(#fffdd2));
+	background: -moz-linear-gradient(top,  #fffdd2,  #fffcb8);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcb8', endColorstr='#fffdd2');
+}
+/*
+.yellow-button:hover {
+	background: #f47c20;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
+	background: -moz-linear-gradient(top,  #f88e11,  #f06015);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');
+}
+.yellow-button:active {
+	color: #fcd3a5;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f47a20), to(#faa51a));
+	background: -moz-linear-gradient(top,  #f47a20,  #faa51a);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f47a20', endColorstr='#faa51a');
+}
+*/
+.left-button {
+	float: left;
+}
+.right-button {
+	float: right;
+}
+.or {
+	padding: 0;
+	}
+
+
+
+
+/* =Header
+-------------------------------------------------------------- */
+.header-container {
+	/*background-color: #fff;*/
+	max-width: 1140px;
+	margin: auto;
+	}
+
+
+
+/* =Content
+-------------------------------------------------------------- */
+#mc_embed_signup {
+	width:50%;
+	margin: auto;
+}
+.sign-up {
+	font-size: 200%;
+	text-align: center;
+	}
+
+/* =Images
+-------------------------------------------------------------- */
+
+a img {
+	border: none;
+}
+p img {
+	margin-bottom: 0.5em; /* a small bottom margin prevents content floating under images */
+}
+/*
+Resize images to fit the main content area.
+- Applies only to images uploaded via WordPress by targeting size-* classes.
+- Other images will be left alone. Use "size-auto" class to apply to other images.
+*/
+img.size-auto,
+img.size-full,
+img.size-large,
+img.size-medium,
+.attachment img,
+.widget-area img,
+.wp-caption {
+	max-width: 100%; /* When images are too wide for containing element, force them to fit. */
+	height: auto; /* Override height to match resized width for correct aspect ratio. */
+}
+img.alignleft {
+	margin-right: 1em;
+}
+img.alignright {
+	margin-left: 1em;
+}
+
+/* =Footer
+-------------------------------------------------------------- */
+
+#colophon {
+	padding: 1em 0 0;
+}
+#footer-wrapper {
+	max-width: 1140px;
+	margin: auto;
+	border-top: 2px solid #b3d841;
+	background-color: #dedede;
+}
+.contact {
+	padding-left: 5%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.footer, .push {
+	clear:both;
+	height: 103px; /*Extra 2px allows for border top*/
+}
+
+
+/* =1140
+-------------------------------------------------------------- */
+
+/* ==================================================================================================================== */
+/* ! The 1140px Grid V2 by Andy Taylor \ http://cssgrid.net \ http://www.twitter.com/andytlr \ http://www.andytlr.com   */
+/* ==================================================================================================================== */
+
+.container {
+padding-left: 20px;
+padding-right: 20px;
+}
+
+.row {
+width: 100%;
+max-width: 1140px;
+min-width: 230px;
+margin: 0 auto;
+overflow: hidden;
+}
+
+.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol {
+margin-right: 3.8%;
+float: left;
+min-height: 1px;
+}
+
+.row .onecol {
+width: 4.85%;
+}
+
+.row .twocol {
+width: 13.45%;
+}
+
+.row .threecol {
+width: 22.05%;
+}
+
+.row .fourcol {
+width: 30.75%;
+}
+
+.row .fivecol {
+width: 39.45%;
+}
+
+.row .sixcol {
+width: 48%;
+}
+
+.row .sevencol {
+width: 56.75%;
+}
+
+.row .eightcol {
+width: 65.4%;
+}
+
+.row .ninecol {
+width: 74.05%;
+}
+
+.row .tencol {
+width: 82.7%;
+}
+
+.row .elevencol {
+width: 91.35%;
+}
+
+.row .twelvecol {
+width: 100%;
+float: left;
+}
+
+.last {
+margin-right: 0px;
+}
+
+img, object, embed {
+max-width: 100%;
+}
+
+img {
+	height: auto;
+}
+/* =Media queries */
+
+@media only screen and (max-width: 1023px) {
+
+    body {
+    font-size: 80%;
+    }
+    .flipbox li{
+    	font-size: 90%;
+    }
+    .flipbox h2 {
+    
+     	padding-top: 30px;
+     	padding-bottom: 0;
+      }
+       .flipbox h3 {
+       
+     	padding-top: 0;
+     	padding-bottom: 0px;
+      }
+
+}
+
+/* Mobile */
+
+@media handheld, only screen and (max-width: 767px) {
+
+	body {
+	-webkit-text-size-adjust: none;
+	}
+	
+	.row, body, .container {
+	width: 100%;
+	min-width: 0;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	}
+	
+	.row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .sixcol, .row .sevencol, .row .eightcol, .row .ninecol, .row .tencol, .row .elevencol, .row .twelvecol {
+	width: auto;
+	float: none;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	}
+
+}
+
+
+/* for testing phone layout on a bigger screen */
+@media only screen and (max-width: 767px) {
+   
+    #title-box {
+        padding-left: 10%;
+    }
+    #site-description {
+    	text-align: left;
+    	 padding-left: 7.5%;
+    	 padding-top: 5px;
+    	 padding-bottom: 15px;
+    }
+    .entry-header {
+    	padding-top: 0px;
+    }
+    #post-container {
+        padding-left: 10%;
+    }
+    #sidebar-container {
+        padding-left: 10%;
+    }
+    .flipbox li {
+     	font-size: 70%;
+    }
+     .flipbox h2 {
+     	padding-top: 30px;
+     	padding-bottom: 15px;
+      }
+       .flipbox h3 {
+     	padding-top: 15px;
+     	padding-bottom: 0px;
+      }
+}
+@media handheld and (max-width: 767px) and (orientation:portrait) {
+    #title-box {
+        padding-left: 10%;
+    }
+    #post-container {
+        padding-left: 10%;
+    }
+    #sidebar-container {
+        padding-left: 10%;
+    }
+    .flipbox li {
+     	font-size: 70%;
+    }
+     .flipbox h2 {
+     	padding-top: 30px;
+     	padding-bottom: 15px;
+      }
+       .flipbox h3 {
+     	padding-top: 15px;
+     	padding-bottom: 0px;
+      }
+}
+@media handheld and (max-width: 767px) and (orientation:landscape) {
+     #title-box {
+        padding-left: 10%;
+    }
+    #post-container {
+        padding-left: 10%;
+    }
+    #sidebar-container {
+        padding-left: 10%;
+    }
+    .flipbox li {
+     	font-size: 70%;
+    }
+     .flipbox h2 {
+     	padding-top: 30px;
+     	padding-bottom: 15px;
+      }
+       .flipbox h3 {
+     	padding-top: 15px;
+     	padding-bottom: 0px;
+      }
+}
+@media handheld, only screen and (max-width: 479px) {
+	    .flipbox li {
+     	font-size: 70%;
+     	padding-bottom: 0 !important;
+    }
+      .flipbox h2 {
+        font-size: 90%;
+     	padding-top: 10px;
+     	padding-bottom: 0px;
+      }
+       .flipbox h3 {
+       font-size: 90%;
+     	padding-top: 0px;
+     	padding-bottom: 0px;
+      }
+      #access a {
+      	font-size: 90%;
+      }
+      
+      
+	
+}
+@media handheld, only screen and (max-width: 319px) {
+    .flipbox li {
+     	font-size: 70%;
+     	padding-bottom: 0 !important;
+    }
+      .flipbox h2 {
+      font-size: 90%;
+     	padding-top: 10px;
+     	padding-bottom: 0px;
+      }
+       .flipbox h3 {
+       font-size: 90%;
+     	padding-top: 0px;
+     	padding-bottom: 0px;
+      }
+      #access a {
+      	font-size: 80%;
+      }
+		
+}
+
+
+/* =Fonts
+-------------------------------------------------------------- */
+@font-face {
+    font-family: 'Lobster13Regular';
+    src: url('fonts/Lobster_1.3-webfont.eot');
+    src: url('fonts/Lobster_1.3-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Lobster_1.3-webfont.woff') format('woff'),
+         url('fonts/Lobster_1.3-webfont.ttf') format('truetype'),
+         url('fonts/Lobster_1.3-webfont.svg#Lobster13Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CabinRegular';
+    src: url('fonts/Cabin-Regular-webfont.eot');
+    src: url('fonts/Cabin-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Cabin-Regular-webfont.woff') format('woff'),
+         url('fonts/Cabin-Regular-webfont.ttf') format('truetype'),
+         url('fonts/Cabin-Regular-webfont.svg#CabinRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'CabinBold';
+    src: url('fonts/Cabin-Bold-webfont.eot');
+    src: url('fonts/Cabin-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Cabin-Bold-webfont.woff') format('woff'),
+         url('fonts/Cabin-Bold-webfont.ttf') format('truetype'),
+         url('fonts/Cabin-Bold-webfont.svg#CabinBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.codebox {
+	width: 100%;
+	background-color: #fff;
+	height:auto;
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 80% !important;
+	
+}
+.flipbox{
+  position: relative;
+  line-height: 120%;
+  background-color: #fff;
+  font-family: 'CabinRegular';
+  font-size: 90%;
+  text-align: center;
+  margin-top:30px;
+  nargin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 584px;
+  box-shadow: 5px 10px 15px #cccccc;
+  -moz-box-shadow: 5px 10px 15px #cccccc;
+  -webkit-box-shadow:5px 10px 15px #cccccc;
+}
+.flipbox ul {
+	text-align: left;
+}
+.flipbox li {
+	padding-top: 0;
+	padding-bottom: 5px;
+}
+.flipPad {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  margin-right: 0;
+  margin-left: 0;
+  text-align: center;
+}
+
+.flipPad a {
+    font-family: "CabinRegular";
+    width: 100px;
+    color: #fff;
+    text-shadow: #000 1px 1px;
+    border-top: 1px solid #b3d841;
+    margin-top: 10px;
+    padding: 5px 15px;
+     -moz-border-radius: 2px;
+ 	-webkit-border-radius: 2px;
+  	-moz-box-shadow: 1px 1px 2px #999999;
+  	-webkit-box-shadow: 1px 1px 2px #999999;
+  	border-radius: 2px;
+  	box-shadow: 1px 1px 2px #999999;
+  	background: #fffcb8;
+
+    /*** Adding CSS3 Gradients ***/
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fffdd2), to(#fffcb8));
+    background:  -moz-linear-gradient(0% 100% 90deg,#fffcb8, #fffdd2);
+  
+}
+	
+.flipPad a:hover {
+	-moz-border-radius: 3px;
+ 	-webkit-border-radius: 3px;
+ 	border-radius: 3px;
+  	-moz-box-shadow: 1px 1px 2px #fff;
+  	-webkit-box-shadow: 1px 1px 2px #fff;
+  	box-shadow: 1px 1px 2px #fff;
+  
+}
+.flipPad a.view-detail {
+  display: inline;
+}
+.flipPad a.view-image {
+  display: none;
+}
+.work-image {
+	height: auto;
+	margin: 0 auto -7px; /* 7px is because box drops below image - not sure why */
+}
+.flipboxReverse {
+	display: none;
+}
